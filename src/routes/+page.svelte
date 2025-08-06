@@ -1,5 +1,7 @@
 <script lang="ts">
 	import BlurText from '$lib/text-animation/BlurText.svelte';
+	import CircularText from '$lib/text-animation/CircularText.svelte';
+	import CurvedLoop from '$lib/text-animation/CurvedLoop.svelte';
 	import SplitText from '$lib/text-animation/SplitText.svelte';
 </script>
 
@@ -27,9 +29,20 @@
 	className="big-text"
 />
 
+<CircularText text="SVELTE*BITS*COMPONENTS*" onHover="slowDown" spinDuration={20} />
+
+<CurvedLoop
+	marqueeText="Be ✦ Creative ✦ With ✦ Svelte ✦ Bits ✦"
+	speed={3}
+	curveAmount={500}
+	direction="right"
+	interactive={true}
+	className="custom-text-style"
+/>
+
 <style>
 	:global(body) {
-		background-color: #c0c0c0;
+		background-color: #e0e0e0;
 	}
 
 	:global(.big-text) {
